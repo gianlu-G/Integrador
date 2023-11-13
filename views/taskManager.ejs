@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TP Integrador - Control Tareas</title>
+  <script src="https://kit.fontawesome.com/57cf2b3238.js" crossorigin="anonymous"></script>
+  <style>
+    .card {
+      border-color: rgb(232 229 229);
+      border-width: 0.1rem;
+      border-style: solid;
+      max-height: 12vh;
+      padding: 0.5rem;
+      width: -webkit-fill-available;
+    }
+
+    div.container {
+      padding: 0.5rem;
+      display: inline-flex;
+    }
+
+    div.container.section {
+      width: 31vw;
+      height: 75vh;
+      border-style: dotted;
+      border-color: rgb(199, 199, 199);
+      margin: 0.1rem;
+    }
+
+    button {
+      width: 10vw;
+      height: 5vh;
+      min-height: 35px;
+      margin-right: 1vh;
+      background-color: rgb(5, 210, 5);
+      font-weight: bold;
+      color: white;
+      border-width: 0;
+      border-radius: 0.5vw;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: rgb(1, 108, 1);
+    }
+
+    input {
+      width: 87vw;
+      border-radius: 0.5vw;
+      border-color: rgb(199, 199, 199);
+      border-style: solid;
+    }
+
+    input.title-readonly {
+      border: none;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="margin: auto;">
+    <!-- Aquí se insertará el contenido específico para cada vista -->
+    <div class="container">
+      <button>Agregar</button>
+      <input type="text" name="titulo" id="titulo" placeholder="Titulo">
+    </div>
+    <div style="display: inline-flex;">
+      <div class="container section">
+        <div class="card">
+          <span>
+            <div style="display: inline-flex;width: 100%;">
+              <i class="fa-solid fa-pen" onclick="EditTitle()" id="icon-edit"></i>
+              <i class="fa-solid fa-floppy-disk" id="icon-save" style="display: none;"></i>
+              <i class="fa-solid fa-xmark" style="margin-left: 94%;"></i>
+            </div>
+            <input class="title-readonly" type="text" id="title" readonly
+              value="Consectetur labore sint fugiat aliqua eiusmod aliqua laboris. Commodo ea quis Lorem aute tempor laboris laboris reprehenderit. Incididunt sunt voluptate amet nisi. Sit non veniam proident proident labore in ut id magna qui mollit.">
+            <div style="margin-left: 90%;">
+              <i class="fa-solid fa-circle-chevron-left"></i>
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </div>
+          </span>
+        </div>
+      </div> <!-- Tareas por hacer-->
+      <div class="container section"></div> <!-- Tareas en curso-->
+      <div class="container section"></div> <!-- Tareas finalizadas-->
+    </div>
+  </div>
+</body>
+<script src="/assets/js/taskManager.js"></script>
+</html>
